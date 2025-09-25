@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty of Science and Technology MRU - MUTEESA 1 ROYAL UNIVERSITY KIRUMBA MAIN CAMPUS</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: grid;
+            grid-template-areas: 
+                "nav nav"
+                "sidebar main"
+                "footer footer";
+            grid-template-columns: 250px 1fr;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+            background-color: #f5f7fa;
+            color: #fb0909;
+        }
+
+        /* Navigation Bar */
+        nav {
+            grid-area: nav;
+            background-color: #00308F; /* Royal blue */
+            color: white;
+            padding: 1rem;
+            display: flexbox;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(10, 249, 82, 0.2);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00ff2a; /* Gold highlight on hover */
+        }
+
+        /* Sidebar */
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #1f61be; /* Darker blue */
+            color: rgb(5, 211, 252);
+            padding: 1rem 0;
+            position: fixed;
+            left: 0;
+            top: 60px;
+            height: calc(90vh - 60px);
+            width: 200px;
+            box-shadow: 10px 0 10px rgba(250, 3, 3, 0.1);
+        }
+
+        .sidebar-menu {
+            list-style: none;
+        }
+
+        .sidebar-menu li {
+            padding: 1rem 1rem;
+            border-bottom: 1px solid rgba(5, 21, 240, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        .sidebar-menu li:hover {
+            background-color: #2a5ba8;
+            cursor: pointer;
+        }
+
+        .sidebar-menu li a {
+            color: rgb(22, 244, 22);
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Main Content */
+        main {
+            grid-area: main;
+            padding: 2rem;
+        }
+
+        .main-header {
+            color: #00308F;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #00308F;
+        }
+
+        .course-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: grey;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .course-table th, 
+        .course-table td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+
+        .course-table th {
+            background-color: #00308F;
+            color: white;
+        }
+
+        .course-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .course-table tr:hover {
+            background-color: #e8f0fe;
+        }
+
+        /* Footer */
+        footer {
+            grid-area: footer;
+            background-color: #00308F;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            body {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                    "nav"
+                    "sidebar"
+                    "main"
+                    "footer";
+            }
+            
+            .sidebar {
+                position: relative;
+                top: 0;
+                height: auto;
+                width: 100%;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+    <!-- Navigation Bar -->
+    <nav>
+        <h1 style="color: yellow;font-size: 30pX;font-family: Cambria; align-content: center;">MUTEESA 1 ROYAL UNIVERSITY</h1> 
+       
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+         <br>
+        <ul class="sidebar-menu">
+             <br>
+            <li><a href="#">PROFILE</a></li>
+             <br>
+            <li><a href="#">COURSES</a></li>
+             <br>
+            <li><a href="#">DASHBOARD</a></li>
+            <br>
+            <li><a href="#">SETTINGS</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <h2 class="main-header" style="color: green;">Faculty of Science and Technology</h2>
+        
+        
+        <table class="course-table">
+            <thead>
+                <tr>
+                    <th style="color:yellow;">NO</th>
+                    <th style="color:yellow;">COURSE CODE</th>
+                    <th style="color:yellow;">COURSE NAME</th>
+                    <th style="color:yellow;">PERIOD</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>BEICT</td>
+                    <td>Education With ICT</td>
+                    <td>3 YEARS</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>BIT</td>
+                    <td>Bachelor's Of Information Technology</td>
+                    <td>3YEARS</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>DIT</td>
+                    <td>Dipoma In Information Technology</td>
+                    <td>2YEARS</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>SWE</td>
+                    <td>Software Engineering</td>
+                    <td>4YEARS</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="current-year"></span> @MRU.All rights reserved</p>
+    </footer>
+
+    <script>
+        // Display current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
